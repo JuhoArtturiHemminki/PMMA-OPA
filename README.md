@@ -60,6 +60,19 @@ The following table details the physical properties, mechanical constraints, and
 | **Data Encoding Protocol** | Optical Pulse-Width Modulation ($PWM$) | High-fidelity synchronous clock synchronization embedded directly into the carrier wave. |
 | **Interconnect Crosstalk** | Absolute Zero ($-\infty\text{ dB}$) | Orthogonal waveguides can cross physically without signal degradation, allowing true 3D fabric layout. |
 
+### 3.1. Macro-Scale Architectural Scalability (1mm TOSLINK Waveguides)
+
+While the primary micro-architectural specification targets sub-micron confinement for maximum transistor density, the PMMA-OPA framework natively supports structural scaling up to macro-scale geometries—specifically utilizing 1.0 mm TOSLINK-derivative core diameters. 
+
+When configuring the platform under the Macro-Scale Topography, the localized Plasmonic Metal-Dielectric-Metal (MDM) cladding boundaries and Spatial Frequency Modulation (SFM) layers can be bypassed, as the 650 nm carrier wave operates well above the optical diffraction limit within a 1.0 mm routing channel. 
+
+This macro-scale implementation trades extreme spatial density for several distinct physical and operational advantages:
+* **Simplified Fabric Manufacturability:** Eliminates the requirement for sub-nanometer lithography, allowing the solid-state core to be manufactured or cast using standard high-precision polymer optics infrastructure.
+* **Extreme Physical & Structural Durability:** The macro-scale substrate exhibits near-immune tolerance to microscopic surface roughness and material lattice imperfections that would otherwise cause scattering and loss in sub-micron channels.
+* **High-Power Kerr-Modulation Tolerance:** A larger waveguide volume significantly increases the material's optical damage threshold, allowing for higher total optical flux without risking structural degradation or thermal breakdown of the PMMA substrate during sustained, high-intensity cross-phase modulation.
+
+This scaling vector makes the Macro-OPA configuration exceptionally suited for highly specialized deployment environments—such as deep-space or high-radiation zones—where absolute electromagnetic immunity and mechanical resilience are prioritized over raw spatial gate density.
+
 ---
 
 ## 4. Micro-Architectural Implementation & Non-Volatile Memory
